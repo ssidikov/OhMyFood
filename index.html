@@ -4,11 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OhMyFood !</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
-        <a href="index.html" class="header__logo">ohmyfood</a>
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="index.html" class="header__logo-link">ohmyfood</a>
+            </div>
+            <div class="header__location">
+                <i class="fas fa-map header__location-icon"></i>
+                <span class="header__location-text">Paris, Belleville</span>
+            </div>
+        </div>
     </header>
-</body>
+    <main>
+        <section class="hero">
+            <div class="container hero_container">
+                <div class="hero__title">
+                    <h1 class="hero__title-text">Réservez le menu qui vous convient</h1>
+                    <p class="hero__title-description">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+                </div>
+                <div class="hero__button">
+                    <a href="#" class="hero__button-link">Explorer nos restaurants</a>
+                </div>
+            </div>
+        </section>
+        <section class="menu">
+            <div class="container menu__container">
+                <div class="menu__title">
+                    <h2 class="menu__title-text">Fonctionnement</h2>
+                </div>
+                <div class="menu__content">
+                    <div class="menu__content-item">
+                        <div class="menu__content-icon">
+                            <i class="fas fa-mobile-alt menu__content-icon"></i>
+                        </div>
+                        <h3 class="menu__content-title">Choisissez un restaurant</h3>
+                    </div>
+                    <div class="menu__content-item">
+                        <div class="menu__content-icon">
+                            <i class="fas fa-list-ul menu__content-icon"></i>
+                        </div>
+                        <h3 class="menu__content-title">Composez votre menu</h3>
+                    </div>
+                    <div class="menu__content-item">
+                        <div class="menu__content-icon">
+                            <i class="fas fa-store menu__content-icon"></i>
+                        </div>
+                        <h3 class="menu__content-title">Dégustez au restaurant</h3>
+                    </div>
+        </section>
+        <section class="restaurants">
+            <div class="container restaurants__container">
+                <div class="restaurants__title">
+                    <h2 class="restaurants__title-text">Restaurants</h2>
+                </div>
+                <div class="restaurants__content">
+                    <div class="restaurants__content-item">
+                        <div class="restaurants__content-image">
+                            <img src="./img/restaurants/resto_1.jpg" alt="restaurant1" class="restaurants__content-image">
+                            <span class="restaurants__content-badge">Nouveau</span>
+                        </div>
+                        <div class="restaurants__content-description">
+                            <h3 class="restaurants__content-title">La palette du goût</h3>
+                            <p class="restaurants__content-text">Ménilmontant</p>
+                        </div>
+                        <div class="restaurants__content-like"></div>
+                    </div>
+                    <div class="restaurants__content-item">
+                        <div class="restaurants__content-image">
+                            <img src="./img/restaurants/resto_2.jpg" alt="restaurant2" class="restaurants__content-image">
+                            <span class="restaurants__content-badge">Nouveau</span>
+                        </div>
+                        <div class="restaurants__content-description">
+                            <h3 class="restaurants__content-title">La note enchantée</h3>
+                            <p class="restaurants__content-text">Charonne</p>
+                        </div>
+                        <div class="restaurants__content-like"></div>
+                    </div>
+                    <div class="restaurants__content-item">
+                        <div class="restaurants__content-image">
+                            <img src="./img/restaurants/resto_3.jpg" alt="restaurant3" class="restaurants__content-image">
+                        </div>
+                        <div class="restaurants__content-description">
+                            <h3 class="restaurants__content-title">À la française</h3>
+                            <p class="restaurants__content-text">Cité Rouge</p>
+                        </div>
+                        <div class="restaurants__content-like"></div>
+                    </div>
+                    <div class="restaurants__content-item">
+                        <div class="restaurants__content-image">
+                            <img src="./img/restaurants/resto_4.jpg" alt="restaurant4" class="restaurants__content-image">
+                        </div>
+                        <div class="restaurants__content-description">
+                            <h3 class="restaurants__content-title">Le délice des sens</h3>
+                            <p class="restaurants__content-text">Folie-Méricourt</p>
+                        </div>
+                        <div class="restaurants__content-like"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer__container">
+            <div class="footer__logo">
+                <a href="index.html" class="footer__logo-link">ohmyfood</a>
+            </div>
+            <div class="footer__links">
+                <a href="#" class="footer__links-item">
+                    <i class="fas fa-utensils menu__content-icon"></i>
+                    <span class="footer__links-text">Réservez une table</span>
+                </a>
+                <a href="#" class="footer__links-item">
+                    <i class="fas fa-hands-helping menu__content-icon"></i>
+                    <span class="footer__links-text">Réservez une table</span>
+                </a>
+                <a href="#" class="footer__links-item">
+                    <span class="footer__links-text">Réservez une table</span>
+                </a>
+                <a href="#" class="footer__links-item">
+                    <span class="footer__links-text">Réservez une table</span>
+                </a>
+            </div>
+        </div>
+    </footer>
 </html>
