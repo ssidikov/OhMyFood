@@ -30,9 +30,9 @@
                     <h1 class="hero__title-text">Réservez le menu qui vous convient</h1>
                     <p class="hero__title-description">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
                 </div>
-                <button class="hero__button btn">
-                    <a href="#" class="hero__button-link">Explorer nos restaurants</a>
-                </button>
+                <button class="hero__button btn" onclick="window.location.href='#resto'">
+                    Explorer nos restaurants
+                </button>                
             </div>
         </section>
         <section class="menu">
@@ -42,25 +42,30 @@
                 </div>
                 <div class="menu__content">
                     <div class="menu__content-item">
+                        <span class="menu__content-number">01</span>
                         <div class="menu__content-icon">
                             <i class="fas fa-mobile-alt menu__content-icon"></i>
                         </div>
                         <h3 class="menu__content-title">Choisissez un restaurant</h3>
                     </div>
                     <div class="menu__content-item">
+                        <span class="menu__content-number">02</span>
                         <div class="menu__content-icon">
                             <i class="fas fa-list-ul menu__content-icon"></i>
                         </div>
                         <h3 class="menu__content-title">Composez votre menu</h3>
                     </div>
                     <div class="menu__content-item">
+                        <span class="menu__content-number">03</span>
                         <div class="menu__content-icon">
                             <i class="fas fa-store menu__content-icon"></i>
                         </div>
                         <h3 class="menu__content-title">Dégustez au restaurant</h3>
                     </div>
+                </div>
+            </div>
         </section>
-        <section class="restaurants">
+        <section class="restaurants" id="resto">
             <div class="container restaurants__container">
                 <div class="restaurants__title">
                     <h2 class="restaurants__title-text">Restaurants</h2>
@@ -120,19 +125,20 @@
             <div class="footer__links">
                 <a href="#" class="footer__links-item">
                     <i class="fas fa-utensils footer__content-icon"></i>
-                    <span class="footer__links-text">Réservez une table</span>
+                    <span class="footer__links-text">Proposer un restaurant</span>
                 </a>
                 <a href="#" class="footer__links-item">
                     <i class="fas fa-hands-helping footer__content-icon"></i>
-                    <span class="footer__links-text">Réservez une table</span>
+                    <span class="footer__links-text">Devenir partenaire</span>
                 </a>
                 <a href="#" class="footer__links-item">
-                    <span class="footer__links-text">Réservez une table</span>
+                    <span class="footer__links-text">Mentions légales</span>
                 </a>
                 <a href="#" class="footer__links-item">
-                    <span class="footer__links-text">Réservez une table</span>
+                    <span class="footer__links-text">Contact</span>
                 </a>
             </div>
         </div>
     </footer>
+    
 </html>
