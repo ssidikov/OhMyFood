@@ -17,7 +17,7 @@ $green-font: #008766
 $grey-tint4: #7E7E7E
 
 @mixin button-gradient
-    background: linear-gradient(193deg, $primary-color -11.44%, #FF79DA 123.93%)
+    background: linear-gradient(193deg, #FF79DA -11.44%, $primary-color 123.93%)
 
 
 .btn
@@ -28,13 +28,13 @@ $grey-tint4: #7E7E7E
     @include button-gradient
     border-radius: 25px
     border: none
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25)
-    font-size: 16px
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25)
+    font-size: 1rem
     font-weight: 500
     transition: background-color 250ms
     &:hover
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%),linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%)
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35)
+        box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.35)
 
 body
     margin: 0
@@ -65,7 +65,7 @@ p
 .container
     max-width: 1440px
     margin: 0 auto
-    padding: 0 20px
+    // padding: 0 20px
 
 // header
 
@@ -82,10 +82,10 @@ p
         align-items: center
         background: $white
         color: $black
-        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15)
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15)
         &-link
             font-family: 'Shrikhand'
-            font-size: 30px
+            font-size: 1.875rem
             text-decoration: none
             color: $black
     &__location
@@ -98,98 +98,97 @@ p
         color: $grey
         font-size: 1rem
         font-weight: 500
-        padding: 17px 0px
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
+        padding: 17px 0
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
 
 // main
 // section-hero
 
 .hero
-    width: 100%
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    text-align: center
     background: $background
-    padding: 40px 0px 27px 0px
-
-.hero__title
-    &-text
-    font-size: 24px
-    font-weight: 700
-    margin: 0 48px 15px 35px
-    &-description
-        font-size: 18px
+    padding: 2.44rem 0 3.56rem 0
+    // padding: 2rem
+    &__container
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        text-align: center
+        align-items: center
+    &__title-text
+        font-weight: 700
+        margin: 0 3.62rem 1rem 2.62rem
+    &__title-description
+        font-size: 1.125rem
         font-weight: 300
         color: $grey
+        margin: 0rem 1.62rem 1.69rem 2.13rem
 
-.hero__button
-    margin-bottom: 57px
+// .hero__button
+//     width: 13.625rem
+//     height: 3.125rem
     
 
 // section-menu
 
 .menu
-    padding: 48px 20px 68px 20px
+    padding: 3rem 1.25rem 4.25rem 2.03rem
     &__title-text
-        font-size: 24px
-        font-weight: 700
-        margin-bottom: 26px
-
-.menu__content
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    gap: 25px
-    counter-reset: compteListe
-    &-item
-        width: 100%
+        margin-bottom: 1.62rem
+    &__content
         display: flex
-        flex-direction: row
-        justify-content: start
+        flex-direction: column
+        justify-content: center
         align-items: center
-        gap: 20px
-        height: 72px
-        border-radius: 20px
-        background: $background
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15)
-        padding: 25px 38px 28px 36px
-        cursor: pointer
-        // .menu__content-number
-        //     position: relative
-        //     top: 0px
-        //     right: 60px
-        //     font-size: 18px
-        //     font-weight: 700
-        //     color: $primary-color
-        .menu__content-icon
-            color: $grey-tint4
-            &:hover
-                color: $primary-color
-        &:before
-            counter-increment: compteListe 1
-            content: counter(compteListe) " "
-            background: $primary-color
-            height: 1.5rem
-            width: 1.5rem
-            border-radius: 100px
+        gap: 1.56rem
+        counter-reset: compteListe
+        margin-left: 0.78rem
+        &-item
+            width: 100%
             display: flex
-            justify-content: center
+            flex-direction: row
+            justify-content: start
             align-items: center
-            color: $white
-            position: absolute
-            left: 1.7rem
+            gap: 1.25rem
+            height: 72px
+            border-radius: 1.25rem
+            background: $background
+            box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+            padding: 1.25rem 2.375rem 1.75rem 2.25rem
+            cursor: pointer
+            position: relative
+            // .menu__content-number
+            //     position: relative
+            //     top: 0
+            //     right: 60px
+            //     font-size: 18px
+            //     font-weight: 700
+            //     color: $primary-color
+            .menu__content-icon
+                color: $grey-tint4
+                &:hover
+                    color: $primary-color
+            &:before
+                counter-increment: compteListe 1
+                content: counter(compteListe) " "
+                background: $primary-color
+                height: 1.5rem
+                width: 1.5rem
+                border-radius: 6.25rem
+                display: flex
+                justify-content: center
+                align-items: center
+                color: $white
+                position: absolute
+                left: -0.7rem
 
     // section-restaurants
 
 .restaurants
     background: $background
-    padding-bottom: 66px
+    padding: 0 1.12rem 4.12rem 1.12rem
 
 .restaurants__title
-    padding: 54px 0px 20px 20px
+    padding: 3.375rem 0 1.25rem 1.25rem
     &-text
     font-size: 1.5rem
     font-weight: 700
@@ -199,7 +198,7 @@ p
     flex-direction: column
     justify-content: center
     align-items: center
-    gap: 20px
+    gap: 1.25rem
     &-link
         width: 100%
         display: flex
@@ -210,13 +209,14 @@ p
         // height: 72px
         border-radius: 15px
         background: $white
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10)
+        box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.10)
         cursor: pointer
     &-image
         width: 100%
         height: 12rem
         object-fit: cover
         border-radius: 15px 15px 0 0
+        position: relative
     &-badge
         padding: 10px 20px
         background: $green
@@ -224,12 +224,12 @@ p
         font-size: 0.875rem
         font-weight: 500
         border-radius: 2px
-        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15)
-        position: relative
-        right: -21.5rem
-        top: -10.5rem
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15)
+        position: absolute
+        right: 1rem
+        top: 1rem
     &-description
-        padding: 16px 0px 16px 16px
+        padding: 1rem 0 1rem 1rem
         display: flex
         flex-direction: row
         justify-content: space-between
@@ -247,7 +247,7 @@ p
         justify-content: flex-end
         align-items: center
         gap: 10px
-        padding: 10px 16px 16px 0px
+        padding: 10px 1rem 1rem 0
     &-heart
         color: $black
         position: absolute
@@ -263,29 +263,67 @@ p
 .footer__container
     background: $grey
     color: $white
-    padding: 22px 25px
+    padding: 1.375rem 1.563rem  
     display: flex
     flex-direction: column
     align-items: flex-start
-    gap: 16px
+    gap: 1rem
     .footer__logo-link
         font-family: 'Shrikhand'
-        font-size: 18px
+        font-size: 1.125rem
         font-weight: 400
         color: $white
     .footer__links
         display: flex
         flex-direction: column
         gap: 7px
+        .footer__links-item
+            // display: flex
+            // justify-content: space-between
         .footer__content-icon
             color: $white
-            margin-right: 11px
-            width: 11px
-            height: 13px
-        .footer__links-item
-            display: flex
-            justify-content: flex-start
+            font-size: 1rem
+            width: 1.25rem
+            // margin-right: 11px
+            // width: 11px
+            // height: 13px
         .footer__links-text
             color: $white
-            font-size: 16px
+            font-size: 1rem
+            font-weight: 400
+            // margin-left: .5rem
+        .main-links
             font-weight: 500
+
+
+@media (min-width: 1024px)
+    .hero
+        padding: 1.88rem 0
+
+    .menu
+        padding: 3rem 12.94rem 4.25rem 11.25rem
+        &__content
+            flex-direction: row
+            gap: 2.28rem
+            
+    .restaurants
+        padding: 0 11.25rem 1.88rem 11.25rem
+        &__content
+            display: grid
+            grid-template-columns: 1fr 1fr
+            grid-template-rows: 1fr 1fr
+            gap: 3.12rem 6.25rem
+            padding: 25px 0 0
+
+    .footer__container
+        flex-direction: row-reverse
+        padding: 1.56rem
+        .footer__logo-link
+            margin-right: 3rem
+        .footer__links
+            flex-direction: row
+            margin-right: 1rem
+            gap: 1rem
+            &-item:nth-child(2n)
+                margin-right: 2rem
+        
