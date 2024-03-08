@@ -10,17 +10,17 @@
   text-align: center;
   color: #FFFFFF;
   cursor: pointer;
-  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193deg, #FF79DA -11.44%, #9356DC 123.93%);
   border-radius: 25px;
   border: none;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  font-size: 16px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  font-size: 1rem;
   font-weight: 500;
   transition: background-color 250ms;
 }
 .btn:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.35);
 }
 
 body {
@@ -74,11 +74,11 @@ p {
   align-items: center;
   background: #FFFFFF;
   color: #101010;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 }
 .header__logo-link {
   font-family: "Shrikhand";
-  font-size: 30px;
+  font-size: 1.875rem;
   text-decoration: none;
   color: #101010;
 }
@@ -92,8 +92,8 @@ p {
   color: #353535;
   font-size: 1rem;
   font-weight: 500;
-  padding: 17px 0px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 17px 0;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .hero {
@@ -139,12 +139,12 @@ p {
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem;
   height: 72px;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   background: #F6F6F6;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  padding: 25px 38px 28px 36px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  padding: 1.25rem 2.375rem 1.75rem 2.25rem;
   cursor: pointer;
   position: relative;
 }
@@ -160,7 +160,7 @@ p {
   background: #9356DC;
   height: 1.5rem;
   width: 1.5rem;
-  border-radius: 100px;
+  border-radius: 6.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,7 +175,7 @@ p {
 }
 
 .restaurants__title {
-  padding: 54px 0px 20px 20px;
+  padding: 3.375rem 0 1.25rem 1.25rem;
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -184,7 +184,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem;
 }
 .restaurants__content-link {
   width: 100%;
@@ -193,7 +193,7 @@ p {
   justify-content: space-between;
   border-radius: 15px;
   background: #FFFFFF;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 .restaurants__content-image {
@@ -211,13 +211,13 @@ p {
   font-size: 0.875rem;
   font-weight: 500;
   border-radius: 2px;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
   position: absolute;
   right: 1rem;
   top: 1rem;
 }
 .restaurants__content-description {
-  padding: 16px 0px 16px 16px;
+  padding: 1rem 0 1rem 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -238,7 +238,7 @@ p {
   justify-content: flex-end;
   align-items: center;
   gap: 10px;
-  padding: 10px 16px 16px 0px;
+  padding: 10px 1rem 1rem 0;
 }
 .restaurants__content-heart {
   color: #101010;
@@ -256,15 +256,15 @@ p {
 .footer__container {
   background: #353535;
   color: #FFFFFF;
-  padding: 22px 25px;
+  padding: 1.375rem 1.563rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  gap: 1rem;
 }
 .footer__container .footer__logo-link {
   font-family: "Shrikhand";
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 400;
   color: #FFFFFF;
 }
@@ -280,7 +280,7 @@ p {
 }
 .footer__container .footer__links .footer__links-text {
   color: #FFFFFF;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
 }
 .footer__container .footer__links .main-links {
