@@ -324,6 +324,16 @@ p {
     margin-right: 2rem;
   }
 }
+@keyframes CardAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .header__container {
   display: flex;
   flex-direction: row;
@@ -397,6 +407,13 @@ p {
   padding: 1rem;
   border-radius: 0.94rem;
   box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  animation: CardAnimation 2s ease both;
+}
+.menu__card-item:hover .menu__card-selected {
+  transform: translateX(0);
 }
 .menu__card-title {
   font-size: 1.125rem;
@@ -409,6 +426,27 @@ p {
 .menu__card-price {
   font-size: 0.94rem;
   font-weight: 700;
+}
+.menu__card-selected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0.94rem 0.94rem 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 20px;
+  background: #99E2D0;
+  color: #FFFFFF;
+  padding: 22.5px 20px;
+  transform-origin: right 50%;
+  transform: translateX(65px);
+  transition-duration: 0.5s;
+}
+.menu__card-selected-icon {
+  font-size: 1.5rem;
+  height: 1.69rem;
+  width: 1.5rem;
 }
 .menu__button {
   width: 11.625rem;
