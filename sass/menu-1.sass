@@ -16,7 +16,7 @@
     padding: 0 16px
 
 .header__arrow-icon
-    color: s.$black
+    color: s.$grey
     font-size: 1.3rem
     margin-right: 1rem
 .header__logo
@@ -45,6 +45,9 @@
             font-size: 1.75rem
             font-weight: 400
             margin-bottom: .5rem
+        &-heart
+            top: -5px
+            // left: -75px
     &__card
         display: flex
         flex-direction: column
@@ -77,6 +80,11 @@
             &:hover
                 .menu__card-selected
                     transform: translateX(0)
+            // & input[type=checkbox]:checked
+            //     .menu__card-selected
+            //         display: inline-block
+            //         opacity: 1
+            //         right: 65px
         &-title
             font-size: 1.125rem
             font-weight: 500
@@ -99,7 +107,7 @@
             font-size: 20px
             background: s.$green
             color: s.$white
-            padding: 22.5px 20px
+            padding: 23px 20px
             // margin: -1rem -5rem -1rem 1rem
             // width: 4rem
             transform-origin: right 50%

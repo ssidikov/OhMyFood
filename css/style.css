@@ -6,21 +6,21 @@
 }
 
 .btn {
-  padding: 15px 20px;
-  text-align: center;
+  background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   color: #FFFFFF;
-  cursor: pointer;
-  background: linear-gradient(193deg, #FF79DA -11.44%, #9356DC 123.93%);
-  border-radius: 25px;
   border: none;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
   font-size: 1rem;
   font-weight: 500;
-  transition: background-color 250ms;
+  text-decoration: none;
+  padding: 15.5px 22px;
+  border-radius: 25px;
+  transition: 0.3s;
 }
 .btn:hover {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
-  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.35);
+  filter: brightness(1.1);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
 body {
@@ -173,9 +173,10 @@ p {
   background: #F6F6F6;
   padding: 0 1.12rem 4.12rem 1.12rem;
 }
-
 .restaurants__title {
-  padding: 3.375rem 0 1.25rem 1.25rem;
+  padding: 3.375rem 0 1.25rem 0;
+}
+.restaurants-text {
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -233,24 +234,39 @@ p {
   font-size: 1rem;
   font-weight: 300;
 }
-.restaurants__content-like {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 1rem 1rem 0;
-}
 .restaurants__content-heart {
-  color: #101010;
+  font-size: 24px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: -32px;
+}
+.restaurants__content-heart__outline {
   position: absolute;
-  margin-right: 0.56rem;
-  font-size: 1.5rem;
+}
+.restaurants__content-heart__solid {
+  position: absolute;
+  background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
 }
 .restaurants__content-heart:hover {
-  background-color: #9356DC;
+  cursor: pointer;
 }
-.restaurants__content-heart:active {
-  background-color: #9356DC;
+.restaurants__content-heart:hover .restaurants__content-heart__solid {
+  transform: scale(1);
+  opacity: 1;
+}
+.restaurants__content-heart:hover .restaurants__content-heart__outline {
+  background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
 }
 
 .footer__container {
