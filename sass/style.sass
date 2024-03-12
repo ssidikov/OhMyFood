@@ -4,19 +4,30 @@
     box-sizing: border-box
     scroll-behavior: smooth
 
+//colors
+
 $primary-color: #9356DC
 $secondary-color: #FF79DA
 $black: #101010
 $white: #FFFFFF
-$grey: #353535
-$grey-2: #EAEAEA
+$gray: #353535
+$gray-2: #EAEAEA
 $background: #F6F6F6
 $blue: #89C8FA
 $blue2: #003A68
 $green: #99E2D0
 $green-font: #008766
-$grey-tint4: #7E7E7E
+$gray-tint4: #7E7E7E
 
+
+//mixin
+
+@mixin container-padding
+  @media screen and (min-width: 768px) and (max-width: 1075px)
+    padding: 3rem
+
+
+//button
 
 .btn
     background: linear-gradient(0deg,rgba($primary-color, .9),rgba($secondary-color, .9))
@@ -44,11 +55,76 @@ body
 header
     width: 100%
 
-//temporary styles
-img
-    width: 100%
-    height: 231px
-    object-fit: cover
+//loader
+
+.cs-loader
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.5) 50%, transparent 40%)
+  background-size: 150% 150%
+  animation: bokeness 3s infinite linear, fadeOut 3s ease-in-out forwards
+
+.cs-loader-inner
+  transform: translateY(-50%)
+  top: 50%
+  position: absolute
+  width: calc(100% - 200px)
+  color: #fff
+  padding: 0 100px
+  text-align: center
+
+.cs-loader-inner label
+  font-size: 20px
+  opacity: 0
+  display: inline-block
+
+@keyframes lol
+  0%
+    opacity: 0
+    transform: translateX(-300px)
+  33%
+    opacity: 1
+    transform: translateX(0px)
+  66%
+    opacity: 1
+    transform: translateX(0px)
+  100%
+    opacity: 0
+    transform: translateX(300px)
+
+.cs-loader-inner label:nth-child(6)
+  animation: lol 3s infinite ease-in-out
+
+.cs-loader-inner label:nth-child(5)
+  animation: lol 3s 100ms infinite ease-in-out
+
+.cs-loader-inner label:nth-child(4)
+  animation: lol 3s 200ms infinite ease-in-out
+
+.cs-loader-inner label:nth-child(3)
+  animation: lol 3s 300ms infinite ease-in-out
+
+.cs-loader-inner label:nth-child(2)
+  animation: lol 3s 400ms infinite ease-in-out
+
+.cs-loader-inner label:nth-child(1)
+  animation: lol 3s 500ms infinite ease-in-out
+
+@keyframes bokeness
+  0%
+    background-position: 0% 0%
+  100%
+    background-position: 100% 100%
+
+@keyframes fadeOut
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+
 
 a
     text-decoration: none
@@ -64,7 +140,6 @@ p
 .container
     max-width: 1440px
     margin: 0 auto
-    // padding: 0 20px
 
 // header
 
@@ -93,12 +168,15 @@ p
         justify-content: center
         align-items: center
         gap: 17px
-        background: $grey-2
-        color: $grey
+        background: $gray-2
+        color: $gray
         font-size: 1rem
         font-weight: 500
         padding: 17px 0
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+    @media (min-width: 768px)
+        &__logo
+            height: 96px
 
 // main
 // section-hero
@@ -106,7 +184,6 @@ p
 .hero
     background: $background
     padding: 2.44rem 0 3.56rem 0
-    // padding: 2rem
     &__container
         display: flex
         flex-direction: column
@@ -119,18 +196,16 @@ p
     &__title-description
         font-size: 1.125rem
         font-weight: 300
-        color: $grey
+        color: $gray
         margin: 0rem 1.62rem 1.69rem 2.13rem
+    @media (min-width: 1075px)
+        padding: 1.88rem 0
 
-// .hero__button
-//     width: 13.625rem
-//     height: 3.125rem
-    
-
-// section-menu
+//menu
 
 .menu
     padding: 3rem 1.25rem 4.25rem 2.03rem
+    @include container-padding
     &__title-text
         margin-bottom: 1.62rem
     &__content
@@ -155,15 +230,8 @@ p
             padding: 1.25rem 2.375rem 1.75rem 2.25rem
             cursor: pointer
             position: relative
-            // .menu__content-number
-            //     position: relative
-            //     top: 0
-            //     right: 60px
-            //     font-size: 18px
-            //     font-weight: 700
-            //     color: $primary-color
             .menu__content-icon
-                color: $grey-tint4
+                color: $gray-tint4
                 &:hover
                     color: $primary-color
             &:before
@@ -179,14 +247,23 @@ p
                 color: $white
                 position: absolute
                 left: -0.7rem
+        &-title
+            font-size: 1rem
+            font-weight: 500
+    @media (min-width: 1075px)
+        padding: 3rem 12.94rem 4.25rem 11.25rem
+        &__content
+            flex-direction: row
+            gap: 2.28rem
 
-    // section-restaurants
+    //restaurants
 
 .restaurants
+    @include container-padding
     background: $background
-    padding: 0 1.12rem 4.12rem 1.12rem
+    padding: 3.75rem 1.12rem 4.12rem 1.12rem
     &__title
-        padding: 3.375rem 0 1.25rem 0
+        padding-bottom: 1.25rem
     &-text
         font-size: 1.5rem
         font-weight: 700
@@ -207,7 +284,7 @@ p
             cursor: pointer
         &-image
             width: 100%
-            height: 12rem
+            height: 174px
             object-fit: cover
             border-radius: 15px 15px 0 0
             position: relative
@@ -252,7 +329,6 @@ p
                 background-clip: text
                 color: transparent
                 opacity: 0
-                // transform: scale(0)
                 transition: 0.3s ease-in-out
             &:hover
                 cursor: pointer
@@ -263,117 +339,24 @@ p
                     background: linear-gradient(180deg,#9356DC 0%,#FF79DA 100%)
                     background-clip: text
                     color: transparent
-// .card__icon
-//     font-size: 24px
-//     position: absolute
+    @media (min-width: 768px)
+        &__content
+            display: grid
+            grid-template-columns: 1fr 1fr
+            grid-template-rows: 1fr 1fr
+            gap: 1.5rem 2rem
+            padding: 25px 0 0
+    @media (min-width: 1075px)
+        padding: 0 11.25rem 1.88rem 11.25rem
+        &__content
+            gap: 3.12rem 6.25rem
+            padding: 25px 0 0
 
-// .btn-heart
-//     position: relative
-//     display: -webkit-box
-//     display: -ms-flexbox
-//     display: flex
-//     -webkit-box-pack: center
-//     -ms-flex-pack: center
-//     justify-content: center
-//     -webkit-box-align: center
-//     -ms-flex-align: center
-//     align-items: center
-//     top: 0
-//     left: -23px
-
-// .btn-heart__outline
-//     position: absolute
-
-// .btn-heart__solid
-//     position: absolute
-//     background: -webkit-gradient(linear,left top,left bottom,from(#9356DC),to(#FF79DA))
-//     background: -o-linear-gradient(top,#9356DC 0%,#FF79DA 100%)
-//     background: linear-gradient(180deg,#9356DC 0%,#FF79DA 100%)
-//     -webkit-background-clip: text
-//     background-clip: text
-//     color: transparent
-//     -webkit-transform: scale(0)
-//     -ms-transform: scale(0)
-//     transform: scale(0)
-//     -webkit-transition: -webkit-transform 300ms
-//     transition: -webkit-transform 300ms
-//     -o-transition: transform 300ms
-//     transition: transform 300ms
-//     transition: transform 300ms,-webkit-transform 300ms
-
-// .btn-heart:hover
-//     cursor: pointer
-
-// .btn-heart:hover .btn-heart__solid
-//     -webkit-transform: scale(1)
-//     -ms-transform: scale(1)
-//     transform: scale(1)
-
-// .btn-heart:hover .btn-heart__outline
-//     background: -webkit-gradient(linear,left top,left bottom,from(#9356DC),to(#FF79DA))
-//     background: -o-linear-gradient(top,#9356DC 0%,#FF79DA 100%)
-//     background: linear-gradient(180deg,#9356DC 0%,#FF79DA 100%)
-//     -webkit-background-clip: text
-//     background-clip: text
-//     color: transparent
-
-// .btn
-//     background-color: #999
-//     background-image: -webkit-gradient(linear,left bottom,left top,from(rgba(147,86,220,0.9)),to(rgba(255,121,218,0.9)))
-//     background-image: -o-linear-gradient(bottom,rgba(147,86,220,0.9),rgba(255,121,218,0.9))
-//     background-image: linear-gradient(0deg,rgba(147,86,220,0.9),rgba(255,121,218,0.9))
-//     -webkit-box-shadow: 0 4px 8px 5px rgba(0,0,0,.07)
-//     box-shadow: 0 4px 8px 5px rgba(0,0,0,.07)
-//     color: #fff
-//     text-decoration: none
-//     padding: 15.5px 22px
-//     border-radius: 50px
-//     -webkit-transition: .3s
-//     -o-transition: .3s
-//     transition: .3s
-
-// .btn:hover
-//     background-color: #fff
-//     -webkit-box-shadow: 0 4px 8px 5px rgba(0,0,0,.1)
-//     box-shadow: 0 4px 8px 5px rgba(0,0,0,.1)
-
-    // &-like
-    //     display: flex
-    //     justify-content: flex-end
-    //     align-items: center
-    //     gap: 10px
-    //     padding: 10px 1rem 1rem 0
-    //     position: absolute
-    //     bottom: 1.9rem
-    //     right: 2.3rem
-    //     width: 26px
-    //     &__default
-    //     font-size: 1.5rem
-    //     position: absolute
-    //     right: 25px
-    //     bottom: 25px
-    //     opacity: 1
-    //     &__liked
-    //     font-size: 1.5rem
-    //     position: absolute
-    //     right: 25px
-    //     bottom: 25px
-    //     background: linear-gradient(#FF79DA, #9356DC)
-    //     -webkit-background-clip: text
-    //     -webkit-text-fill-color: transparent
-    //     opacity: 0
-    //     &:hover
-    //         &__default
-    //             opacity: 1
-    //             transition: 0.3s ease-in-out
-    //         &__liked
-    //             opacity: 0
-    //             transition: 0.3s ease-in-out
-
-    // section-footer
+    //footer
 
 .footer__container
-    background: $grey
+    @include container-padding
+    background: $gray
     color: $white
     padding: 1.375rem 1.563rem  
     display: flex
@@ -390,46 +373,21 @@ p
         flex-direction: column
         gap: 7px
         .footer__links-item
-            // display: flex
-            // justify-content: space-between
         .footer__content-icon
             color: $white
             font-size: 1rem
             width: 1.25rem
-            // margin-right: 11px
-            // width: 11px
-            // height: 13px
         .footer__links-text
             color: $white
             font-size: 1rem
             font-weight: 400
-            // margin-left: .5rem
         .main-links
             font-weight: 500
 
-
-@media (min-width: 1024px)
-    .hero
-        padding: 1.88rem 0
-
-    .menu
-        padding: 3rem 12.94rem 4.25rem 11.25rem
-        &__content
-            flex-direction: row
-            gap: 2.28rem
-            
-    .restaurants
-        padding: 0 11.25rem 1.88rem 11.25rem
-        &__content
-            display: grid
-            grid-template-columns: 1fr 1fr
-            grid-template-rows: 1fr 1fr
-            gap: 3.12rem 6.25rem
-            padding: 25px 0 0
-
-    .footer__container
+    @media (min-width: 768px)
+        height: 7.12rem
         flex-direction: row-reverse
-        padding: 1.56rem
+        align-items: flex-end
         .footer__logo-link
             margin-right: 3rem
         .footer__links
@@ -438,4 +396,3 @@ p
             gap: 1rem
             &-item:nth-child(2n)
                 margin-right: 2rem
-        

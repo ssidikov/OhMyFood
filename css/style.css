@@ -34,13 +34,91 @@ header {
   width: 100%;
 }
 
-img {
+.cs-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 100%;
-  height: 231px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.5) 50%, transparent 40%);
+  background-size: 150% 150%;
+  animation: bokeness 3s infinite linear, fadeOut 3s ease-in-out forwards;
 }
 
+.cs-loader-inner {
+  transform: translateY(-50%);
+  top: 50%;
+  position: absolute;
+  width: calc(100% - 200px);
+  color: #fff;
+  padding: 0 100px;
+  text-align: center;
+}
+
+.cs-loader-inner label {
+  font-size: 20px;
+  opacity: 0;
+  display: inline-block;
+}
+
+@keyframes lol {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  33% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  66% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+}
+.cs-loader-inner label:nth-child(6) {
+  animation: lol 3s infinite ease-in-out;
+}
+
+.cs-loader-inner label:nth-child(5) {
+  animation: lol 3s 100ms infinite ease-in-out;
+}
+
+.cs-loader-inner label:nth-child(4) {
+  animation: lol 3s 200ms infinite ease-in-out;
+}
+
+.cs-loader-inner label:nth-child(3) {
+  animation: lol 3s 300ms infinite ease-in-out;
+}
+
+.cs-loader-inner label:nth-child(2) {
+  animation: lol 3s 400ms infinite ease-in-out;
+}
+
+.cs-loader-inner label:nth-child(1) {
+  animation: lol 3s 500ms infinite ease-in-out;
+}
+
+@keyframes bokeness {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 a {
   text-decoration: none;
 }
@@ -95,6 +173,11 @@ p {
   padding: 17px 0;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
+@media (min-width: 768px) {
+  .header__logo {
+    height: 96px;
+  }
+}
 
 .hero {
   background: #F6F6F6;
@@ -117,9 +200,19 @@ p {
   color: #353535;
   margin: 0rem 1.62rem 1.69rem 2.13rem;
 }
+@media (min-width: 1075px) {
+  .hero {
+    padding: 1.88rem 0;
+  }
+}
 
 .menu {
   padding: 3rem 1.25rem 4.25rem 2.03rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1075px) {
+  .menu {
+    padding: 3rem;
+  }
 }
 .menu__title-text {
   margin-bottom: 1.62rem;
@@ -168,13 +261,31 @@ p {
   position: absolute;
   left: -0.7rem;
 }
+.menu__content-title {
+  font-size: 1rem;
+  font-weight: 500;
+}
+@media (min-width: 1075px) {
+  .menu {
+    padding: 3rem 12.94rem 4.25rem 11.25rem;
+  }
+  .menu__content {
+    flex-direction: row;
+    gap: 2.28rem;
+  }
+}
 
 .restaurants {
   background: #F6F6F6;
-  padding: 0 1.12rem 4.12rem 1.12rem;
+  padding: 3.75rem 1.12rem 4.12rem 1.12rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1075px) {
+  .restaurants {
+    padding: 3rem;
+  }
 }
 .restaurants__title {
-  padding: 3.375rem 0 1.25rem 0;
+  padding-bottom: 1.25rem;
 }
 .restaurants-text {
   font-size: 1.5rem;
@@ -199,7 +310,7 @@ p {
 }
 .restaurants__content-image {
   width: 100%;
-  height: 12rem;
+  height: 174px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px 15px 0 0;
@@ -268,6 +379,24 @@ p {
           background-clip: text;
   color: transparent;
 }
+@media (min-width: 768px) {
+  .restaurants__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5rem 2rem;
+    padding: 25px 0 0;
+  }
+}
+@media (min-width: 1075px) {
+  .restaurants {
+    padding: 0 11.25rem 1.88rem 11.25rem;
+  }
+  .restaurants__content {
+    gap: 3.12rem 6.25rem;
+    padding: 25px 0 0;
+  }
+}
 
 .footer__container {
   background: #353535;
@@ -277,6 +406,11 @@ p {
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1075px) {
+  .footer__container {
+    padding: 3rem;
+  }
 }
 .footer__container .footer__logo-link {
   font-family: "Shrikhand";
@@ -302,31 +436,11 @@ p {
 .footer__container .footer__links .main-links {
   font-weight: 500;
 }
-
-@media (min-width: 1024px) {
-  .hero {
-    padding: 1.88rem 0;
-  }
-  .menu {
-    padding: 3rem 12.94rem 4.25rem 11.25rem;
-  }
-  .menu__content {
-    flex-direction: row;
-    gap: 2.28rem;
-  }
-  .restaurants {
-    padding: 0 11.25rem 1.88rem 11.25rem;
-  }
-  .restaurants__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 3.12rem 6.25rem;
-    padding: 25px 0 0;
-  }
+@media (min-width: 768px) {
   .footer__container {
+    height: 7.12rem;
     flex-direction: row-reverse;
-    padding: 1.56rem;
+    align-items: flex-end;
   }
   .footer__container .footer__logo-link {
     margin-right: 3rem;
