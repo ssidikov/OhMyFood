@@ -455,10 +455,15 @@ p {
   }
 }
 
-.loader {
-  animation: loader 4s forwards;
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
-
 @keyframes blur {
   from {
     filter: blur(0);
@@ -467,6 +472,7 @@ p {
   to {
     filter: blur(9px);
     opacity: 0;
+    visibility: hidden;
   }
 }
 #loading {
@@ -474,8 +480,8 @@ p {
   width: 100%;
   height: 100%;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.6);
-  animation: blur 4s forwards;
+  background-color: rgb(255, 255, 255);
+  animation: fadeOut 4s forwards;
 }
 
 #loadingInnerWrapper {
