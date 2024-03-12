@@ -390,7 +390,7 @@ p {
 }
 @media (min-width: 1075px) {
   .restaurants {
-    padding: 0 11.25rem 1.88rem 11.25rem;
+    padding: 1.88rem 11.25rem 1.88rem 11.25rem;
   }
   .restaurants__content {
     gap: 3.12rem 6.25rem;
@@ -455,6 +455,10 @@ p {
   }
 }
 
+.hide {
+  display: none;
+}
+
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -480,7 +484,7 @@ p {
   width: 100%;
   height: 100%;
   left: 0;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(215, 215, 215, 0.9);
   animation: fadeOut 4s forwards;
 }
 
