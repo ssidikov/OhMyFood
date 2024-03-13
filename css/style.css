@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
 * {
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
@@ -30,95 +31,6 @@ body {
   width: 100%;
 }
 
-header {
-  width: 100%;
-}
-
-.cs-loader {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.5) 50%, transparent 40%);
-  background-size: 150% 150%;
-  animation: bokeness 3s infinite linear, fadeOut 3s ease-in-out forwards;
-}
-
-.cs-loader-inner {
-  transform: translateY(-50%);
-  top: 50%;
-  position: absolute;
-  width: calc(100% - 200px);
-  color: #fff;
-  padding: 0 100px;
-  text-align: center;
-}
-
-.cs-loader-inner label {
-  font-size: 20px;
-  opacity: 0;
-  display: inline-block;
-}
-
-@keyframes lol {
-  0% {
-    opacity: 0;
-    transform: translateX(-300px);
-  }
-  33% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-  66% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(300px);
-  }
-}
-.cs-loader-inner label:nth-child(6) {
-  animation: lol 3s infinite ease-in-out;
-}
-
-.cs-loader-inner label:nth-child(5) {
-  animation: lol 3s 100ms infinite ease-in-out;
-}
-
-.cs-loader-inner label:nth-child(4) {
-  animation: lol 3s 200ms infinite ease-in-out;
-}
-
-.cs-loader-inner label:nth-child(3) {
-  animation: lol 3s 300ms infinite ease-in-out;
-}
-
-.cs-loader-inner label:nth-child(2) {
-  animation: lol 3s 400ms infinite ease-in-out;
-}
-
-.cs-loader-inner label:nth-child(1) {
-  animation: lol 3s 500ms infinite ease-in-out;
-}
-
-@keyframes bokeness {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
-}
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 a {
   text-decoration: none;
 }
@@ -139,10 +51,14 @@ p {
 }
 
 .header {
+  background: #F6F6F6;
+}
+.header__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 .header__logo {
   display: flex;
@@ -175,7 +91,10 @@ p {
 }
 @media (min-width: 768px) {
   .header__logo {
-    height: 96px;
+    padding: 2rem;
+  }
+  .header__location {
+    box-shadow: none;
   }
 }
 
@@ -203,6 +122,11 @@ p {
 @media (min-width: 1075px) {
   .hero {
     padding: 1.88rem 0;
+  }
+}
+@media (min-width: 768px) {
+  .hero__title-text {
+    font-size: 2.5rem;
   }
 }
 
@@ -455,10 +379,6 @@ p {
   }
 }
 
-.hide {
-  display: none;
-}
-
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -474,7 +394,7 @@ p {
     opacity: 1;
   }
   to {
-    filter: blur(9px);
+    filter: blur(3px);
     opacity: 0;
     visibility: hidden;
   }
@@ -501,7 +421,7 @@ p {
 }
 
 #load2 {
-  animation: blur alternate 1s forwards 0.38s;
+  animation: blur alternate 2s forwards 0.38s;
 }
 
 #load3 {

@@ -1,4 +1,4 @@
-@use 'style' as s
+@import "style"
 
 @keyframes CardAnimation
     from
@@ -16,7 +16,7 @@
     padding: 0 16px
 
 .header__arrow-icon
-    color: s.$gray
+    color: $gray
     font-size: 1.3rem
     margin-right: 1rem
 .header__logo
@@ -32,7 +32,7 @@
         height: 380px
 
 .menu
-    background: s.$background
+    background: $background
     margin-top: -2.2rem
     border-radius: 2rem 2rem 0 0
     z-index: 1
@@ -70,13 +70,13 @@
                 display: block
                 width: 2.5rem
                 height: 4px
-                border-bottom: .25rem solid s.$green
+                border-bottom: .25rem solid $green
         &-item
             display: flex
             flex-direction: row
             justify-content: space-between
             align-items: flex-end
-            background: s.$white
+            background: $white
             width: 100%
             padding: 1rem
             border-radius: .94rem
@@ -106,8 +106,8 @@
             right: 0
             top: 0
             font-size: 20px
-            background: s.$green
-            color: s.$white
+            background: $green
+            color: $white
             padding: 23px 20px
             transform-origin: right 50%
             transform: translateX(65px)
