@@ -345,23 +345,48 @@ p
 
 
 //loader
+
+// .loader
+//     animation: loader .01s
+//     animation-delay: 1.75s
+//     animation-fill-mode: both
+//     z-index: 10000
     
-@keyframes fadeOut
-  from
-    opacity: 1
-  to
-    opacity: 0
-    visibility: hidden
+// @keyframes fadeOut
+//   from
+//     opacity: 1
+//   to
+//     opacity: 0
+//     visibility: hidden
+
+@keyframes loader
+
+    0%
+        opacity: 1
+
+    50%
+        opacity: 1
+
+    75%
+        opacity: 0
+
+    90%
+        opacity: 0
+
+    100%
+        opacity: 0
+        // z-index: 1
+        visibility: hidden
 
 @mixin keyframe($loader)
 
   @keyframes #{$loader}
     @content
 
-@mixin animation($params...)
+@mixin animation($params)
   animation: $params
 
-@mixin filter($params...)
+@mixin filter($params)
   filter: $params
 
 @include keyframe(blur)
@@ -375,12 +400,15 @@ p
     visibility: hidden
 
 #loading
-  position: fixed
-  width: 100%
-  height: 100%
-  left: 0
-  background-color: rgba(215, 215, 215, 0.9)
-  animation: fadeOut 4s forwards
+    position: fixed
+    width: 100%
+    height: 100%
+    left: 0
+    background: rgba(140, 140, 140, 0.30)
+    backdrop-filter: blur(7.5px)
+    animation: loader 4s forwards
+    // animation-iteration-count: 1
+    z-index: 1
 
 #loadingInnerWrapper
   position: relative
@@ -390,10 +418,16 @@ p
   top: 40%
 
 #load1
-  @include animation((blur alternate 1s forwards))
+  @include animation((blur alternate 1s))
 
 #load2
-  @include animation((blur alternate 2s forwards 0.38s))
+  @include animation((blur alternate 1s 0.38s))
 
 #load3
-  @include animation((blur alternate 1s forwards 0.62s))
+  @include animation((blur alternate 1s 0.62s))
+
+// #load4
+//   @include animation((blur alternate 1s 1s))
+
+// #load5
+//   @include animation((blur alternate 1s 1s))

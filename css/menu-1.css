@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
 * {
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
@@ -68,6 +69,7 @@ p {
   background: #FFFFFF;
   color: #101010;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  position: relative;
 }
 .header__logo-link {
   font-family: "Shrikhand";
@@ -91,6 +93,9 @@ p {
 @media (min-width: 768px) {
   .header__logo {
     padding: 2rem;
+  }
+  .header__location {
+    box-shadow: none;
   }
 }
 
@@ -118,6 +123,11 @@ p {
 @media (min-width: 1075px) {
   .hero {
     padding: 1.88rem 0;
+  }
+}
+@media (min-width: 768px) {
+  .hero__title-text {
+    font-size: 2.5rem;
   }
 }
 
@@ -370,10 +380,6 @@ p {
   }
 }
 
-.hide {
-  overflow: hidden;
-}
-
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -389,7 +395,7 @@ p {
     opacity: 1;
   }
   to {
-    filter: blur(9px);
+    filter: blur(3px);
     opacity: 0;
     visibility: hidden;
   }
@@ -416,7 +422,7 @@ p {
 }
 
 #load2 {
-  animation: blur alternate 1s forwards 0.38s;
+  animation: blur alternate 2s forwards 0.38s;
 }
 
 #load3 {
