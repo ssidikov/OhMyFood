@@ -3,11 +3,11 @@
 @keyframes CardAnimation
     from
         opacity: 0
-        transform: translateY(5px)
+        transform: translateY(100%)
     to
         opacity: 1
         transform: translateY(0)
-    
+
 .header__container
     display: flex
     flex-direction: row
@@ -84,22 +84,22 @@
             position: relative
             overflow: hidden
             cursor: pointer
-            animation: CardAnimation 2s ease both
+            animation: CardAnimation 1s ease both
             &:hover
                 .menu__card-selected
                     transform: translateX(0)
         &-title
             font-size: 1.125rem
             font-weight: 500
-            animation: CardAnimation 2s ease-in-out both
+            animation: CardAnimation 1s ease-in-out both
         &-text
             font-size: .94rem
             font-weight: 300
-            animation: CardAnimation 2s ease-in-out both
+            animation: CardAnimation 1s ease-in-out both
         &-price
             font-size: .94rem
             font-weight: 700
-            animation: CardAnimation 2s ease-in-out both
+            animation: CardAnimation 1s ease-in-out both
         &-selected
             display: flex
             align-items: center

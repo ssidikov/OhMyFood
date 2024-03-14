@@ -93,6 +93,7 @@ p {
 @media (min-width: 768px) {
   .header__logo {
     padding: 2rem;
+    box-shadow: none;
   }
   .header__location {
     box-shadow: none;

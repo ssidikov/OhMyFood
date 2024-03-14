@@ -93,6 +93,7 @@ p {
 @media (min-width: 768px) {
   .header__logo {
     padding: 2rem;
+    box-shadow: none;
   }
   .header__location {
     box-shadow: none;
@@ -444,7 +445,7 @@ p {
 @keyframes CardAnimation {
   from {
     opacity: 0;
-    transform: translateY(5px);
+    transform: translateY(100%);
   }
   to {
     opacity: 1;
@@ -542,7 +543,7 @@ p {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  animation: CardAnimation 2s ease both;
+  animation: CardAnimation 1s ease both;
 }
 .menu__card-item:hover .menu__card-selected {
   transform: translateX(0);
@@ -550,17 +551,17 @@ p {
 .menu__card-title {
   font-size: 1.125rem;
   font-weight: 500;
-  animation: CardAnimation 2s ease-in-out both;
+  animation: CardAnimation 1s ease-in-out both;
 }
 .menu__card-text {
   font-size: 0.94rem;
   font-weight: 300;
-  animation: CardAnimation 2s ease-in-out both;
+  animation: CardAnimation 1s ease-in-out both;
 }
 .menu__card-price {
   font-size: 0.94rem;
   font-weight: 700;
-  animation: CardAnimation 2s ease-in-out both;
+  animation: CardAnimation 1s ease-in-out both;
 }
 .menu__card-selected {
   display: flex;
