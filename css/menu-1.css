@@ -396,10 +396,10 @@ p {
     opacity: 1;
   }
   75% {
-    opacity: 0;
+    opacity: 1;
   }
   90% {
-    opacity: 0;
+    opacity: 1;
   }
   100% {
     opacity: 0;
@@ -425,7 +425,7 @@ p {
   background: rgba(140, 140, 140, 0.3);
   -webkit-backdrop-filter: blur(7.5px);
           backdrop-filter: blur(7.5px);
-  animation: loader 4s forwards;
+  animation: loader 3s forwards;
   z-index: 1;
 }
 
@@ -457,6 +457,14 @@ p {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@keyframes slideRight {
+  0% {
+    margin-right: 0;
+  }
+  to {
+    margin-right: 60px;
   }
 }
 .header__container {
@@ -524,6 +532,11 @@ p {
   overflow: hidden;
   width: 80%;
 }
+@media screen and (min-width: 768px) {
+  .menu__title-text {
+    width: auto;
+  }
+}
 .menu__title-heart {
   top: -5px;
 }
@@ -560,8 +573,14 @@ p {
   cursor: pointer;
   animation: CardAnimation 1s ease both;
 }
+.menu__card-item:hover .menu__card-price {
+  animation: slideRight 0.5s forwards;
+}
 .menu__card-item:hover .menu__card-selected {
   transform: translateX(0);
+}
+.menu__card-item:hover .menu__card-selected-icon {
+  transform: rotate(360deg);
 }
 .menu__card-description {
   animation: CardAnimation 1s ease-in-out both;
@@ -582,14 +601,11 @@ p {
   overflow: hidden;
 }
 .menu__card-price {
+  color: #353535;
   font-size: 0.94rem;
   font-weight: 700;
-  animation: CardAnimation 1s ease-in-out both;
   transition: 0.5s ease-in-out;
   margin-left: 1rem;
-}
-.menu__card-price:hover {
-  margin-right: 60px;
 }
 .menu__card-selected {
   display: flex;
@@ -603,7 +619,6 @@ p {
   background: #99E2D0;
   color: #FFFFFF;
   padding: 23px 20px;
-  transform-origin: right 50%;
   transform: translateX(65px);
   transition: all 450ms;
 }
@@ -611,6 +626,8 @@ p {
   font-size: 1.5rem;
   height: 1.69rem;
   width: 1.5rem;
+  transform: rotate(270deg);
+  transition: 0.5s ease-in-out;
 }
 .menu__button {
   width: 186px;
