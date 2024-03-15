@@ -44,7 +44,7 @@ $gray-tint4: #7E7E7E
     text-decoration: none
     padding: 15.5px 22px
     border-radius: 25px
-    transition: .3s
+    transition: all 450ms
 
     &:hover
         filter: brightness(1.1)
@@ -174,13 +174,12 @@ p
             border-radius: 1.25rem
             background: $background
             box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15)
-            padding: 1.25rem 2.375rem 1.75rem 2.25rem
+            padding: 1.25rem 0.8rem 1.75rem 2rem
             cursor: pointer
             position: relative
+            transition: all 450ms, background-color 300ms 150ms
             .menu__content-icon
                 color: $gray-tint4
-                &:hover
-                    color: $primary-color
             &:before
                 counter-increment: compteListe 1
                 content: counter(compteListe) " "
@@ -194,6 +193,10 @@ p
                 color: $white
                 position: absolute
                 left: -0.7rem
+            &:hover
+                background-color: rgba($primary-color, 0.1)
+                .menu__content-icon
+                    color: $primary-color
         &-title
             font-size: 1rem
             font-weight: 500
@@ -202,6 +205,8 @@ p
         &__content
             flex-direction: row
             gap: 2.28rem
+            &-item
+                padding: 1.25rem 2.375rem 1.75rem 2.25rem
 
     //restaurants
 
@@ -268,6 +273,7 @@ p
             align-items: center
             top: 0
             left: -32px
+            // left: -41px
             &__outline
                 position: absolute
             &__solid
@@ -411,9 +417,3 @@ p
 
 #load3
   @include animation((blur alternate 1s 0.62s))
-
-// #load4
-//   @include animation((blur alternate 1s 1s))
-
-// #load5
-//   @include animation((blur alternate 1s 1s))

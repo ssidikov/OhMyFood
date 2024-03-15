@@ -54,13 +54,25 @@
             font-size: 1.75rem
             font-weight: 400
             margin-bottom: .5rem
+            text-overflow: ellipsis
+            white-space: nowrap
+            overflow: hidden
+            margin-right: 1rem
+            text-overflow: ellipsis
+            white-space: nowrap
+            overflow: hidden
+            width: 80%
         &-heart
             top: -5px
+            // margin-left: .5rem
     &__card
         display: flex
         flex-direction: column
         align-items: flex-start
         gap: .75rem
+        // text-overflow: ellipsis
+        // white-space: nowrap
+        // overflow: hidden
         &-name
             font-size: 1rem
             font-weight: 300
@@ -88,14 +100,33 @@
             &:hover
                 .menu__card-selected
                     transform: translateX(0)
+        &-description
+            animation: CardAnimation 1s ease-in-out both
+            text-overflow: ellipsis
+            white-space: nowrap
+            overflow: hidden
+            width: 85%
         &-title
             font-size: 1.125rem
             font-weight: 500
-            animation: CardAnimation 1s ease-in-out both
+            text-overflow: ellipsis
+            // white-space: nowrap
+            overflow: hidden
+            // animation: CardAnimation 1s ease-in-out both
+            // text-overflow: ellipsis
+            // white-space: nowrap
+            // overflow: hidden
+            // width: 90%
         &-text
             font-size: .94rem
             font-weight: 300
-            animation: CardAnimation 1s ease-in-out both
+            text-overflow: ellipsis
+            overflow: hidden
+            // animation: CardAnimation 1s ease-in-out both
+            // text-overflow: ellipsis
+            // white-space: nowrap
+            // overflow: hidden
+            // width: 90%
         &-price
             font-size: .94rem
             font-weight: 700
@@ -114,7 +145,7 @@
             padding: 23px 20px
             transform-origin: right 50%
             transform: translateX(65px)
-            transition-duration: 0.5s
+            transition: all 450ms
             &-icon
                 font-size: 1.5rem
                 height: 1.69rem

@@ -17,7 +17,7 @@
   text-decoration: none;
   padding: 15.5px 22px;
   border-radius: 25px;
-  transition: 0.3s;
+  transition: all 450ms;
 }
 .btn:hover {
   filter: brightness(1.1);
@@ -166,12 +166,10 @@ p {
   padding: 1.25rem 2.375rem 1.75rem 2.25rem;
   cursor: pointer;
   position: relative;
+  transition: all 450ms, background-color 300ms 150ms;
 }
 .menu__content-item .menu__content-icon {
   color: #7E7E7E;
-}
-.menu__content-item .menu__content-icon:hover {
-  color: #9356DC;
 }
 .menu__content-item:before {
   counter-increment: compteListe 1;
@@ -186,6 +184,12 @@ p {
   color: #FFFFFF;
   position: absolute;
   left: -0.7rem;
+}
+.menu__content-item:hover {
+  background-color: rgba(147, 86, 220, 0.1);
+}
+.menu__content-item:hover .menu__content-icon {
+  color: #9356DC;
 }
 .menu__content-title {
   font-size: 1rem;
@@ -508,6 +512,14 @@ p {
   font-size: 1.75rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: 1rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 80%;
 }
 .menu__title-heart {
   top: -5px;
@@ -548,15 +560,24 @@ p {
 .menu__card-item:hover .menu__card-selected {
   transform: translateX(0);
 }
+.menu__card-description {
+  animation: CardAnimation 1s ease-in-out both;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 85%;
+}
 .menu__card-title {
   font-size: 1.125rem;
   font-weight: 500;
-  animation: CardAnimation 1s ease-in-out both;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu__card-text {
   font-size: 0.94rem;
   font-weight: 300;
-  animation: CardAnimation 1s ease-in-out both;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu__card-price {
   font-size: 0.94rem;
@@ -577,7 +598,7 @@ p {
   padding: 23px 20px;
   transform-origin: right 50%;
   transform: translateX(65px);
-  transition-duration: 0.5s;
+  transition: all 450ms;
 }
 .menu__card-selected-icon {
   font-size: 1.5rem;

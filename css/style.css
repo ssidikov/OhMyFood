@@ -17,7 +17,7 @@
   text-decoration: none;
   padding: 15.5px 22px;
   border-radius: 25px;
-  transition: 0.3s;
+  transition: all 450ms;
 }
 .btn:hover {
   filter: brightness(1.1);
@@ -163,15 +163,13 @@ p {
   border-radius: 1.25rem;
   background: #F6F6F6;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-  padding: 1.25rem 2.375rem 1.75rem 2.25rem;
+  padding: 1.25rem 0.8rem 1.75rem 2rem;
   cursor: pointer;
   position: relative;
+  transition: all 450ms, background-color 300ms 150ms;
 }
 .menu__content-item .menu__content-icon {
   color: #7E7E7E;
-}
-.menu__content-item .menu__content-icon:hover {
-  color: #9356DC;
 }
 .menu__content-item:before {
   counter-increment: compteListe 1;
@@ -187,6 +185,12 @@ p {
   position: absolute;
   left: -0.7rem;
 }
+.menu__content-item:hover {
+  background-color: rgba(147, 86, 220, 0.1);
+}
+.menu__content-item:hover .menu__content-icon {
+  color: #9356DC;
+}
 .menu__content-title {
   font-size: 1rem;
   font-weight: 500;
@@ -198,6 +202,9 @@ p {
   .menu__content {
     flex-direction: row;
     gap: 2.28rem;
+  }
+  .menu__content-item {
+    padding: 1.25rem 2.375rem 1.75rem 2.25rem;
   }
 }
 
