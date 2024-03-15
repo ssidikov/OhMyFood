@@ -105,7 +105,7 @@
             text-overflow: ellipsis
             white-space: nowrap
             overflow: hidden
-            width: 85%
+            // width: 85%
         &-title
             font-size: 1.125rem
             font-weight: 500
@@ -131,6 +131,10 @@
             font-size: .94rem
             font-weight: 700
             animation: CardAnimation 1s ease-in-out both
+            transition: .5s ease-in-out
+            margin-left: 1rem
+            &:hover
+                margin-right: 60px
         &-selected
             display: flex
             align-items: center

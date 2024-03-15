@@ -163,7 +163,7 @@ p {
   border-radius: 1.25rem;
   background: #F6F6F6;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-  padding: 1.25rem 2.375rem 1.75rem 2.25rem;
+  padding: 1.25rem 0.8rem 1.75rem 2rem;
   cursor: pointer;
   position: relative;
   transition: all 450ms, background-color 300ms 150ms;
@@ -202,6 +202,9 @@ p {
   .menu__content {
     flex-direction: row;
     gap: 2.28rem;
+  }
+  .menu__content-item {
+    padding: 1.25rem 2.375rem 1.75rem 2.25rem;
   }
 }
 
@@ -565,7 +568,6 @@ p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 85%;
 }
 .menu__card-title {
   font-size: 1.125rem;
@@ -583,6 +585,11 @@ p {
   font-size: 0.94rem;
   font-weight: 700;
   animation: CardAnimation 1s ease-in-out both;
+  transition: 0.5s ease-in-out;
+  margin-left: 1rem;
+}
+.menu__card-price:hover {
+  margin-right: 60px;
 }
 .menu__card-selected {
   display: flex;
