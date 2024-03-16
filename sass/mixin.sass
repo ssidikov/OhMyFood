@@ -1,0 +1,39 @@
+//Mixin
+
+//Mixin - Loader animations
+
+@mixin keyframe($loader)
+
+  @keyframes #{$loader}
+    @content
+
+@mixin animation($params)
+  animation: $params
+
+@mixin filter($params)
+  filter: $params
+
+//Mixin - Media Queries
+
+@mixin tablet-version
+  @media screen and (min-width: #{$breakpoint-md})
+    @content
+
+@mixin desktop-version
+  @media screen and (min-width: #{$breakpoint-lg})
+    @content
+
+@mixin container-padding
+  @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg)
+    padding: 3rem
+
+//Mixin - Flexbox
+
+@mixin flex-center
+  display: flex
+  justify-content: center
+  align-items: center
+
+@mixin flex-center-column
+    @include flex-center
+    flex-direction: column
