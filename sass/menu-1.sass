@@ -1,4 +1,10 @@
+// /import style.sass
+
+    
 @import "style"
+
+// Keyframes
+// Keyframes for the card animation
 
 @keyframes CardAnimation
     from
@@ -8,17 +14,20 @@
         opacity: 1
         transform: translateY(0)
 
+// Keyframes for the price animation
+
 @keyframes slideRight
   0%
     margin-right: 0
   to
     margin-right: 60px
 
+// Header
+
 .header__container
-    display: flex
+    @include flex-center
     flex-direction: row
     justify-content: space-between
-    align-items: center
     padding: 0 16px
 
 .header__arrow-icon
@@ -28,14 +37,16 @@
 .header__logo
     box-shadow: none
 
-//banner
+//Banner
 
 .banner__img
     width: 100%
     height: 279px
     object-fit: cover
-    @media screen and (min-width: 768px)
+    @media screen and (min-width: $breakpoint-md)
         height: 380px
+
+// Menu
 
 .menu
     background: $background
@@ -51,37 +62,28 @@
         gap: 2.5rem
         border-radius: 20px 20px 0 0
     &__title
-        display: flex
+        @include flex-center
         flex-direction: row
         justify-content: space-between
-        align-items: center
         &-text
             font-family: Shrikhand
             font-size: 1.75rem
             font-weight: 400
             margin-bottom: .5rem
-            text-overflow: ellipsis
-            white-space: nowrap
-            overflow: hidden
             margin-right: 1rem
             text-overflow: ellipsis
             white-space: nowrap
             overflow: hidden
             width: 80%
-            @media screen and (min-width: 768px)
+            @media screen and (min-width: $breakpoint-md)
                 width: auto
         &-heart
             top: -5px
-            // margin-left: .5rem
     &__card
         display: flex
         flex-direction: column
         align-items: flex-start
         gap: .75rem
-        // margin-right: 60px
-        // text-overflow: ellipsis
-        // white-space: nowrap
-        // overflow: hidden
         &-name
             font-size: 1rem
             font-weight: 300
@@ -108,9 +110,7 @@
             animation: CardAnimation 1s ease both
             &:hover
                 .menu__card-price
-                    // margin-right: 60px
                     animation: slideRight 0.5s forwards
-                    // transition: 1s ease-in-out
                 .menu__card-selected
                     transform: translateX(0)
                     &-icon
@@ -120,38 +120,21 @@
             text-overflow: ellipsis
             white-space: nowrap
             overflow: hidden
-            // width: 85%
         &-title
             font-size: 1.125rem
             font-weight: 500
             text-overflow: ellipsis
-            // white-space: nowrap
             overflow: hidden
-            // animation: CardAnimation 1s ease-in-out both
-            // text-overflow: ellipsis
-            // white-space: nowrap
-            // overflow: hidden
-            // width: 90%
         &-text
             font-size: .94rem
             font-weight: 300
             text-overflow: ellipsis
             overflow: hidden
-            // animation: CardAnimation 1s ease-in-out both
-            // text-overflow: ellipsis
-            // white-space: nowrap
-            // overflow: hidden
-            // width: 90%
         &-price
             color: $gray
             font-size: .94rem
             font-weight: 700
-            // transition: .5s ease-in-out
-            // animation: CardAnimation 1s ease-in-out both
-            margin-left: 1rem
-            // &:hover
-            //     // margin-right: 60px
-            //     animation: slideRight 0.5s forwards
+            margin-left: 12px
         &-selected
             display: flex
             align-items: center
@@ -164,7 +147,6 @@
             background: $green
             color: $white
             padding: 23px 20px
-            // transform-origin: right 50%
             transform: translateX(65px)
             transition: all 450ms
             &-icon
@@ -177,14 +159,15 @@
         width: 186px
         height: 50px
         align-self: center
-    @media screen and (min-width: 768px) and (max-width: 1075px)
+
+    @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg)
             margin: -3rem 3rem 0
             padding: 3rem
             &__title
                 justify-content: center
                 gap: 3.5rem
 
-    @media (min-width: 1075px)
+    @media (min-width: $breakpoint-lg)
             margin: -3rem 12rem 0
             padding: 3rem 10rem 2.5rem 13rem
             &__title

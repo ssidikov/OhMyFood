@@ -2,11 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap')
 
-*
-    font-family: 'Roboto', sans-serif
-    scroll-behavior: smooth
-    box-sizing: border-box
-
 //Colors Variables
 
 $primary-color: #9356DC
@@ -22,14 +17,28 @@ $green: #99E2D0
 $green-font: #008766
 $gray-tint4: #7E7E7E
 
+//Breakpoints
+
+$breakpoint-md: 768px
+$breakpoint-lg: 1075px
+
 
 //Mixin
 
 @mixin container-padding
-  @media screen and (min-width: 768px) and (max-width: 1075px)
+  @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg)
     padding: 3rem
 
+@mixin flex-center
+  display: flex
+  justify-content: center
+  align-items: center
 
+@mixin flex-center-column
+    @include flex-center
+    flex-direction: column
+    
+    
 //button
 
 .btn
@@ -49,12 +58,17 @@ $gray-tint4: #7E7E7E
         filter: brightness(1.1)
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35)
 
+// General styles
+*
+    font-family: 'Roboto', sans-serif
+    scroll-behavior: smooth
+    box-sizing: border-box
+
 body
     margin: 0
     padding: 0
     overflow-x: hidden
     width: 100%
-
 
 a
     text-decoration: none
@@ -71,24 +85,19 @@ p
     max-width: 1440px
     margin: 0 auto
 
-// header
+// Header
 
 .header
     background: $background
 
     &__container
-      display: flex
-      flex-direction: column
-      justify-content: center
-      align-items: center
+      @include flex-center-column
       width: 100%
 
     &__logo
-      display: flex
+      @include flex-center
       height: 63px
       width: 100%
-      justify-content: center
-      align-items: center
       background: $white
       color: $black
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15)
@@ -101,10 +110,8 @@ p
         color: $black
 
     &__location
-      display: flex
+      @include flex-center  
       width: 100%
-      justify-content: center
-      align-items: center
       gap: 17px
       background: $gray-2
       color: $gray
@@ -113,7 +120,7 @@ p
       padding: 17px 0
       box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
 
-    @media (min-width: 768px)
+    @media (min-width: $breakpoint-md)
       &__logo
         padding: 2rem
         box-shadow: none
@@ -121,18 +128,16 @@ p
         box-shadow: none
 
 
-// main
-// section-hero
+// Main
+// Hero section
 
 .hero
     background: $background
     padding: 2.44rem 0 3.56rem 0
     &__container
-        display: flex
-        flex-direction: column
+        @include flex-center-column
         justify-content: space-between
         text-align: center
-        align-items: center
     &__title-text
         font-weight: 700
         margin: 0 3.62rem 1rem 2.62rem
@@ -141,13 +146,13 @@ p
         font-weight: 300
         color: $gray
         margin: 0rem 1.62rem 1.69rem 2.13rem
-    @media (min-width: 1075px)
+    @media (min-width: $breakpoint-lg)
         padding: 1.88rem 0
-    @media (min-width: 768px)
+    @media (min-width: $breakpoint-md)
         &__title-text
             font-size: 2.5rem
 
-//menu
+// Menu section
 
 .menu
     padding: 3rem 1.25rem 4.25rem 2.03rem
@@ -155,19 +160,15 @@ p
     &__title-text
         margin-bottom: 1.62rem
     &__content
-        display: flex
-        flex-direction: column
-        justify-content: center
-        align-items: center
+        @include flex-center-column
         gap: 1.56rem
         counter-reset: compteListe
         margin-left: 0.78rem
         &-item
-            width: 100%
-            display: flex
+            @include flex-center
             flex-direction: row
-            justify-content: start
-            align-items: center
+            justify-content: flex-start
+            width: 100%
             gap: 1.25rem
             height: 72px
             border-radius: 1.25rem
@@ -180,15 +181,13 @@ p
             .menu__content-icon
                 color: $gray-tint4
             &:before
+                @include flex-center
                 counter-increment: compteListe 1
                 content: counter(compteListe) " "
                 background: $primary-color
                 height: 1.5rem
                 width: 1.5rem
                 border-radius: 6.25rem
-                display: flex
-                justify-content: center
-                align-items: center
                 color: $white
                 position: absolute
                 left: -0.7rem
@@ -199,7 +198,7 @@ p
         &-title
             font-size: 1rem
             font-weight: 500
-    @media (min-width: 1075px)
+    @media (min-width: $breakpoint-lg)
         padding: 3rem 12.94rem 4.25rem 11.25rem
         &__content
             flex-direction: row
@@ -207,7 +206,7 @@ p
             &-item
                 padding: 1.25rem 2.375rem 1.75rem 2.25rem
 
-    //restaurants
+// Restaurants section
 
 .restaurants
     @include container-padding
@@ -219,15 +218,12 @@ p
         font-size: 1.5rem
         font-weight: 700
     &__content
-        display: flex
-        flex-direction: column
-        justify-content: center
-        align-items: center
+        @include flex-center-column
         gap: 1.25rem
         &-link
+            @include flex-center-column
             width: 100%
-            display: flex
-            flex-direction: column
+            align-items: stretch
             justify-content: space-between
             border-radius: 15px
             background: $white
@@ -252,10 +248,9 @@ p
             top: 1rem
         &-description
             padding: 1rem 0 1rem 1rem
-            display: flex
+            @include flex-center
             flex-direction: row
             justify-content: space-between
-            align-items: center
             color: $black
         &-title
             font-size: 1.125rem
@@ -267,12 +262,9 @@ p
         &-heart
             font-size: 24px
             position: relative
-            display: flex
-            justify-content: center
-            align-items: center
+            @include flex-center
             top: 0
             left: -32px
-            // left: -41px
             &__outline
                 position: absolute
             &__solid
@@ -291,28 +283,27 @@ p
                     background: linear-gradient(180deg,#9356DC 0%,#FF79DA 100%)
                     background-clip: text
                     color: transparent
-    @media (min-width: 768px)
+    @media (min-width: $breakpoint-md)
         &__content
             display: grid
             grid-template-columns: 1fr 1fr
             grid-template-rows: 1fr 1fr
             gap: 1.5rem 2rem
             padding: 25px 0 0
-    @media (min-width: 1075px)
+    @media (min-width: $breakpoint-lg)
         padding: 1.88rem 11.25rem 1.88rem 11.25rem
         &__content
             gap: 3.12rem 6.25rem
             padding: 25px 0 0
 
-    //footer
+//Footer
 
 .footer__container
     @include container-padding
     background: $gray
     color: $white
     padding: 1.375rem 1.563rem  
-    display: flex
-    flex-direction: column
+    @include flex-center-column
     align-items: flex-start
     gap: 1rem
     .footer__logo-link
@@ -321,8 +312,8 @@ p
         font-weight: 400
         color: $white
     .footer__links
-        display: flex
-        flex-direction: column
+        @include flex-center-column
+        align-items: flex-start
         gap: 7px
         .footer__content-icon
             color: $white
@@ -335,8 +326,9 @@ p
         .main-links
             font-weight: 500
 
-    @media (min-width: 768px)
+    @media (min-width: $breakpoint-md)
         height: 7.12rem
+        justify-content: flex-start
         flex-direction: row-reverse
         align-items: flex-end
         .footer__logo-link
@@ -365,7 +357,6 @@ p
 
     100%
         opacity: 0
-        // z-index: 1
         visibility: hidden
 
 @mixin keyframe($loader)
@@ -396,7 +387,6 @@ p
     background: rgba(140, 140, 140, 0.30)
     backdrop-filter: blur(7.5px)
     animation: loader 3s forwards
-    // animation-iteration-count: 1
     z-index: 1
 
 #loadingInnerWrapper
