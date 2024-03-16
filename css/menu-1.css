@@ -89,7 +89,7 @@ p {
   padding: 17px 0;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .header__logo {
     padding: 2rem;
     box-shadow: none;
@@ -121,12 +121,12 @@ p {
   color: #353535;
   margin: 0rem 1.62rem 1.69rem 2.13rem;
 }
-@media (min-width: 1075px) {
+@media screen and (min-width: 1075px) {
   .hero {
     padding: 1.88rem 0;
   }
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .hero__title-text {
     font-size: 2.5rem;
   }
@@ -196,7 +196,7 @@ p {
   font-size: 1rem;
   font-weight: 500;
 }
-@media (min-width: 1075px) {
+@media screen and (min-width: 1075px) {
   .menu {
     padding: 3rem 12.94rem 4.25rem 11.25rem;
   }
@@ -317,7 +317,7 @@ p {
           background-clip: text;
   color: transparent;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .restaurants__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -326,7 +326,7 @@ p {
     padding: 25px 0 0;
   }
 }
-@media (min-width: 1075px) {
+@media screen and (min-width: 1075px) {
   .restaurants {
     padding: 1.88rem 11.25rem 1.88rem 11.25rem;
   }
@@ -379,7 +379,7 @@ p {
 .footer__container .footer__links .main-links {
   font-weight: 500;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .footer__container {
     height: 7.12rem;
     justify-content: flex-start;
@@ -652,7 +652,7 @@ p {
     gap: 3.5rem;
   }
 }
-@media (min-width: 1075px) {
+@media screen and (min-width: 1075px) {
   .menu {
     margin: -3rem 12rem 0;
     padding: 3rem 10rem 2.5rem 13rem;

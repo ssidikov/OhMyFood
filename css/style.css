@@ -1,4 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes blur {
+  from {
+    filter: blur(0);
+    opacity: 1;
+  }
+  to {
+    filter: blur(3px);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 .btn {
   background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
@@ -47,6 +76,37 @@ p {
 .container {
   max-width: 1440px;
   margin: 0 auto;
+}
+
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(140, 140, 140, 0.3);
+  -webkit-backdrop-filter: blur(7.5px);
+          backdrop-filter: blur(7.5px);
+  animation: loader 3s forwards;
+  z-index: 1;
+}
+
+#loadingInnerWrapper {
+  position: relative;
+  font-size: 3rem;
+  color: #9356DC;
+  text-align: center;
+  top: 40%;
+}
+
+#load1 {
+  animation: blur alternate 1s;
+}
+
+#load2 {
+  animation: blur alternate 1s 0.38s;
+}
+
+#load3 {
+  animation: blur alternate 1s 0.62s;
 }
 
 .header {
@@ -397,64 +457,4 @@ p {
   .footer__container .footer__links-item:nth-child(2n) {
     margin-right: 2rem;
   }
-}
-
-@keyframes loader {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-@keyframes blur {
-  from {
-    filter: blur(0);
-    opacity: 1;
-  }
-  to {
-    filter: blur(3px);
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-#loading {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: rgba(140, 140, 140, 0.3);
-  -webkit-backdrop-filter: blur(7.5px);
-          backdrop-filter: blur(7.5px);
-  animation: loader 3s forwards;
-  z-index: 1;
-}
-
-#loadingInnerWrapper {
-  position: relative;
-  font-size: 3rem;
-  color: #9356DC;
-  text-align: center;
-  top: 40%;
-}
-
-#load1 {
-  animation: blur alternate 1s;
-}
-
-#load2 {
-  animation: blur alternate 1s 0.38s;
-}
-
-#load3 {
-  animation: blur alternate 1s 0.62s;
 }/*# sourceMappingURL=style.css.map */
