@@ -25,6 +25,14 @@ $breakpoint-lg: 1075px
 
 //Mixin
 
+@mixin tablet-version
+  @media screen and (min-width: #{$breakpoint-md})
+    @content
+
+@mixin desktop-version
+  @media screen and (min-width: #{$breakpoint-lg})
+    @content
+
 @mixin container-padding
   @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg)
     padding: 3rem
@@ -120,7 +128,7 @@ p
       padding: 17px 0
       box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
 
-    @media (min-width: $breakpoint-md)
+    @include tablet-version
       &__logo
         padding: 2rem
         box-shadow: none
@@ -146,9 +154,9 @@ p
         font-weight: 300
         color: $gray
         margin: 0rem 1.62rem 1.69rem 2.13rem
-    @media (min-width: $breakpoint-lg)
+    @include desktop-version
         padding: 1.88rem 0
-    @media (min-width: $breakpoint-md)
+    @include tablet-version
         &__title-text
             font-size: 2.5rem
 
@@ -198,7 +206,7 @@ p
         &-title
             font-size: 1rem
             font-weight: 500
-    @media (min-width: $breakpoint-lg)
+    @include desktop-version
         padding: 3rem 12.94rem 4.25rem 11.25rem
         &__content
             flex-direction: row
@@ -283,14 +291,14 @@ p
                     background: linear-gradient(180deg,#9356DC 0%,#FF79DA 100%)
                     background-clip: text
                     color: transparent
-    @media (min-width: $breakpoint-md)
+    @include tablet-version
         &__content
             display: grid
             grid-template-columns: 1fr 1fr
             grid-template-rows: 1fr 1fr
             gap: 1.5rem 2rem
             padding: 25px 0 0
-    @media (min-width: $breakpoint-lg)
+    @include desktop-version
         padding: 1.88rem 11.25rem 1.88rem 11.25rem
         &__content
             gap: 3.12rem 6.25rem
@@ -326,7 +334,7 @@ p
         .main-links
             font-weight: 500
 
-    @media (min-width: $breakpoint-md)
+    @include tablet-version
         height: 7.12rem
         justify-content: flex-start
         flex-direction: row-reverse
