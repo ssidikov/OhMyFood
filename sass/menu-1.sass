@@ -3,25 +3,33 @@
     
 @import "style"
 
-.header__container
-    @include flex-center
-    flex-direction: row
-    justify-content: space-between
-    padding: 0 16px
+// Header
 
-.header__arrow-icon
-    color: $gray
-    font-size: 1.3rem
-    margin-right: 1rem
-.header__logo
-    box-shadow: none
+.header
+    &__container
+        @include flex-center
+        flex-direction: row
+        justify-content: space-between
+        padding: 0 16px
+
+    &__arrow-icon
+        color: $gray
+        font-size: 1.3rem
+        margin-right: 1rem
+
+    &__logo
+        box-shadow: none
+
+        &-link
+            padding-right: 1.25rem
 
 //Banner
 
-.banner__img
-    width: 100%
-    height: 279px
-    object-fit: cover
+.banner
+    &__img
+        width: 100%
+        height: 275px
+        object-fit: cover
     @include tablet-version
         height: 380px
 

@@ -485,25 +485,26 @@ p {
   justify-content: space-between;
   padding: 0 16px;
 }
-
 .header__arrow-icon {
   color: #353535;
   font-size: 1.3rem;
   margin-right: 1rem;
 }
-
 .header__logo {
   box-shadow: none;
+}
+.header__logo-link {
+  padding-right: 1.25rem;
 }
 
 .banner__img {
   width: 100%;
-  height: 279px;
+  height: 275px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media screen and (min-width: 768px) {
-  .banner__img {
+  .banner {
     height: 380px;
   }
 }
