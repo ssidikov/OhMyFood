@@ -430,13 +430,13 @@ p {
     padding: 3rem;
   }
 }
-.footer__container .footer__logo-link {
+.footer__logo-link {
   font-family: "Shrikhand";
   font-size: 1.125rem;
   font-weight: 400;
   color: #FFFFFF;
 }
-.footer__container .footer__links {
+.footer__links {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -444,17 +444,17 @@ p {
   align-items: flex-start;
   gap: 7px;
 }
-.footer__container .footer__links .footer__content-icon {
+.footer__content-icon {
   color: #FFFFFF;
   font-size: 1rem;
   width: 1.25rem;
 }
-.footer__container .footer__links .footer__links-text {
+.footer__links-text {
   color: #FFFFFF;
   font-size: 1rem;
   font-weight: 400;
 }
-.footer__container .footer__links .main-links {
+.footer__links-text .main-links {
   font-weight: 500;
 }
 @media screen and (min-width: 768px) {
@@ -464,15 +464,15 @@ p {
     flex-direction: row-reverse;
     align-items: flex-end;
   }
-  .footer__container .footer__logo-link {
+  .footer__logo-link {
     margin-right: 3rem;
   }
-  .footer__container .footer__links {
+  .footer__links {
     flex-direction: row;
     margin-right: 1rem;
     gap: 1rem;
   }
-  .footer__container .footer__links-item:nth-child(2n) {
+  .footer__links-item:nth-child(2n) {
     margin-right: 2rem;
   }
 }/*# sourceMappingURL=style.css.map */
