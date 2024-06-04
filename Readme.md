@@ -1,6 +1,6 @@
 # Formation Développeur d'application JavaScript React
 
-## Projet 2 : Dynamisez une page web avec des animations CSS
+## Projet 3 : Dynamisez une page web avec des animations CSS
 
 ![screenshot du site](./img/web-site.png)
 
