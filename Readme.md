@@ -26,7 +26,7 @@
 
 ## Technologies utilisées:
 
-HTML / SASS / CSS animations / FIGMA
+HTML / SASS / CSS animations / FIGMA / Flexbox
 
 J'ai intégré une maquette en mode mobile-first, en disposant des maquettes pour mobile et desktop ainsi que du prototype sur Figma, avec les images et textes nécessaires.
 
