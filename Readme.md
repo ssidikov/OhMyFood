@@ -1,17 +1,14 @@
-# Création du site Ohmyfood Paris
+# Formation Développeur d'application JavaScript React
+
+## Projet 2 : Dynamisez une page web avec des animations CSS
 
 ![screenshot du site](./img/web-site.png)
-
-
-Ce projet constitue la troisième étape du parcours "Développeur d'application JavaScript React" chez OpenClassroom. L'objectif est d'intégrer puis de dynamiser une page web avec des animations CSS en utilisant le préprocesseur Sass.
-
-Vous pouvez consulter le [brief complet ici](https://course.oc-static.com/projects/D%C3%A9veloppeur+Web/IW_P4+Animations+CSS+Ohmyfood/Brief+cr%C3%A9atif+site+Ohmyfood.pdf)
 
 ## Objectifs:
 
 1. Développer un site présentant le menu de quatre grands restaurants parisiens.
 2. Permettre la réservation en ligne et la composition de menus.
-Identité graphique:
+   Identité graphique:
 
 ## Polices:
 
@@ -27,8 +24,12 @@ Identité graphique:
 
     - Tertiaire: #99E2D0
 
-## Technologies:
+## Technologies utilisées:
 
-Autorisées: HTML / CSS / Sass
+HTML / SASS / CSS animations / FIGMA
 
-Recommandée: HTML / Sass
+J'ai intégré une maquette en mode mobile-first, en disposant des maquettes pour mobile et desktop ainsi que du prototype sur Figma, avec les images et textes nécessaires.
+
+J'ai mis en œuvre des animations CSS pour enrichir l'expérience utilisateur du site. Ces animations ont donné vie à l'interface et ont rendu la navigation plus interactive et engageante.
+
+Enfin, j'ai versionné mon projet avec Git et GitHub, renforçant ainsi mes compétences essentielles pour la gestion et la collaboration sur des projets de développement web.
